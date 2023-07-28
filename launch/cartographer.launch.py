@@ -60,7 +60,9 @@ def generate_launch_description():
             '-configuration_directory', FindPackageShare('ardupilot_ros').find('ardupilot_ros') + '/configuration_files',
             '-configuration_basename', 'cartographer.lua'],
         remappings = [
-            ('/scan', '/laser/scan')],
+            ('/scan', '/laser/scan'),
+            ('/tf', '/ap/tf'),
+        ],
         output = 'screen'
         )
 
@@ -81,6 +83,10 @@ def generate_launch_description():
             os.path.join(FindPackageShare('ardupilot_ros').find('ardupilot_ros'), "rviz", "cartographer.rviz"),
         ],
         condition=IfCondition(LaunchConfiguration("rviz")),
+        remappings = [
+            ('/tf', '/ap/tf'),
+            ("/tf_static", "/ap/tf_static"),
+        ],
     )
 
     return LaunchDescription([
