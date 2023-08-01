@@ -57,7 +57,7 @@ def generate_launch_description():
         executable = 'cartographer_node',
         parameters = [{'use_sim_time': LaunchConfiguration('use_sim_time')}],
         arguments = [
-            '-configuration_directory', FindPackageShare('ardupilot_ros').find('ardupilot_ros') + '/configuration_files',
+            '-configuration_directory', FindPackageShare('ardupilot_ros').find('ardupilot_ros') + '/config',
             '-configuration_basename', 'cartographer.lua'],
         remappings = [
             ('/scan', '/laser/scan'),
