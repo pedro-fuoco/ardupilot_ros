@@ -7,6 +7,5 @@
             type="set_origin.py"
             respawn="false"
             output="screen" />
-            
-</launch>
 
+</launch>

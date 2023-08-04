@@ -19,6 +19,6 @@
             output="screen" />
        <node pkg="rviz" type="rviz" name="rviz"
     	    args="-d $(find ardupilot_ros)/rviz/gmapping.rviz"/>
-	
+
 
    </launch>

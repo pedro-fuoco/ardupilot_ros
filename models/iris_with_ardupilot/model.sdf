@@ -588,8 +588,8 @@
         <controlVelocitySlowdownSim>1</controlVelocitySlowdownSim>
       </control>
     </plugin>
-    
-    
+
+
     <link name="hokuyo_link">
     <pose>0 0 0 0 0 0</pose>
     <collision name="collision">
@@ -621,7 +621,7 @@
       </inertia>
     </inertial>
 
-    
+
 
     <sensor type="ray" name="laser">
       <pose>0 0 0.3 3.16 0 0</pose>
@@ -656,7 +656,7 @@
 
   </link>
 
-  
+
 
   <joint name="hokuyo_joint" type="fixed">
     <pose>0 0 0 0 0 0</pose>

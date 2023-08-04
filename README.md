@@ -1,7 +1,7 @@
 # ardupilot_ros package for non-gps navigation
 
-## Description : 
-This is a ROS package for non-gps navigation for ardupilot containing all the required files and listed dependencies. This also contains a file from [thien94/vision_to_mavros](https://github.com/thien94/vision_to_mavros) to set origin. 
+## Description :
+This is a ROS package for non-gps navigation for ardupilot containing all the required files and listed dependencies. This also contains a file from [thien94/vision_to_mavros](https://github.com/thien94/vision_to_mavros) to set origin.
 
 Detailed description of the project and setup: [Ardupilot Docs - Cartographer](https://ardupilot.org/dev/docs/ros-cartographer-slam.html)
 

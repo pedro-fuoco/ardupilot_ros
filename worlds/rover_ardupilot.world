@@ -85,8 +85,8 @@
         <uri>model://rover_ardupilot</uri>
         <pose>0 0 0 0 0 0</pose>
       </include>
-      
-      
+
+
     </model>
     <include>
         <uri>model://drone_arena</uri>

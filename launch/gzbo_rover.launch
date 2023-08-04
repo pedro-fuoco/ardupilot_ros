@@ -2,7 +2,7 @@
 <launch>
 
 	<arg name="gui" default="true"/>
-        <include 
+        <include
             file="$(find gazebo_ros)/launch/empty_world.launch">
             <arg name="world_name"  value="$(find ardupilot_ros)/worlds/rover_ardupilot.world"/>
             <arg name="gui" value="$(arg gui)"/>
