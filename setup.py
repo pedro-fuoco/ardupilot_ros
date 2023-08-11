@@ -29,7 +29,7 @@ setup(
     maintainer="Pedro Fuoco",
     maintainer_email="pedrofuoco6@gmail.com",
     description="The ardupilot ROS 2 use cases package",
-    license="TODO",
+    license="GPLv3+",
     tests_require=["pytest"],
     entry_points={
         "console_scripts": [],
