@@ -30,7 +30,7 @@ git clone git@github.com:ardupilot/ardupilot_ros.git
 Install dependencies using rosdep:
 ```bash
 cd ~/ros2_ws
-rosdep install --from-paths src --ignore-src -r
+rosdep install --from-paths src --ignore-src -r --skip-keys gazebo-ros-pkgs
 ```
 
 ## Build
@@ -95,6 +95,47 @@ Then run the controller using,
 `ros2 run ardupilot_ros joy_controller`
 
 Now, using the keyboard keys you can control the drone.
+
+### 2. Obstacle avoidance using Cartographer and Nav2
+
+Using the same simulation as before, the nav2 node can be launched to control the copter once it is in the air.
+
+Launch the simulation:
+
+```bash
+cd ~/ros2_ws
+source install/setup.sh
+ros2 launch ardupilot_gz_bringup iris_maze.launch.py rviz:=false
+```
+Launch cartographer:
+
+```bash
+cd ~/ros2_ws
+source install/setup.sh
+ros2 launch ardupilot_ros cartographer.launch.py rviz:=false
+```
+
+Launch nav2:
+
+```bash
+cd ~/ros2_ws
+source install/setup.sh
+ros2 launch ardupilot_ros navigation.launch.py
+```
+
+Takeoff the Copter using `mavproxy` to an altitude of 2.5m:
+
+```bash
+mavproxy.py --console --map --aircraft test --master=:14550
+
+mode guided
+
+arm throttle
+
+takeoff 2.5
+```
+
+You may now navigate while mapping using the `Nav2 Goal` tool in RVIZ!
 
 ## Contribution Guideline
 
