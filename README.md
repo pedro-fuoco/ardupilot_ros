@@ -96,7 +96,7 @@ Then run the controller using,
 
 Now, using the keyboard keys you can control the drone.
 
-### 2. Obstacle avoidance using Cartographer and Nav2
+### 3. Obstacle avoidance using Cartographer and Nav2
 
 Using the same simulation as before, the nav2 node can be launched to control the copter once it is in the air.
 
