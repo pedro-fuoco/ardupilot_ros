@@ -28,6 +28,7 @@ def generate_launch_description():
         remappings=[
             ("/scan", "/laser/scan"),
             ("/tf", "/ap/tf"),
+            ("/tf_static", "/ap/tf_static"),
         ],
         output="screen",
     )
