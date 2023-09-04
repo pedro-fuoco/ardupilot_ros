@@ -25,11 +25,6 @@ def generate_launch_description():
             "-configuration_basename",
             "cartographer.lua",
         ],
-        remappings=[
-            ("/scan", "/laser/scan"),
-            ("/tf", "/ap/tf"),
-            ("/tf_static", "/ap/tf_static"),
-        ],
         output="screen",
     )
 
@@ -57,10 +52,6 @@ def generate_launch_description():
             ),
         ],
         condition=IfCondition(LaunchConfiguration("rviz")),
-        remappings=[
-            ("/tf", "/ap/tf"),
-            ("/tf_static", "/ap/tf_static"),
-        ],
     )
 
     return LaunchDescription(
