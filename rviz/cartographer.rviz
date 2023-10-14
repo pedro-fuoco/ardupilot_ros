@@ -5,8 +5,8 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /Iris1
-        - /Iris1/Odometry1/Shape1
+        - /Robot1
+        - /Robot1/Odometry1/Shape1
       Splitter Ratio: 0.5
     Tree Height: 555
   - Class: rviz_common/Selection
@@ -258,7 +258,7 @@ Visualization Manager:
           Use rainbow: true
           Value: true
       Enabled: true
-      Name: Iris
+      Name: Robot
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48

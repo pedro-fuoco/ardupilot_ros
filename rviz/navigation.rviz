@@ -5,7 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /Iris1
+        - /Robot1
       Splitter Ratio: 0.5833333134651184
     Tree Height: 285
   - Class: rviz_common/Selection
@@ -491,7 +491,7 @@ Visualization Manager:
             Value: /waypoints
           Value: true
       Enabled: true
-      Name: Iris
+      Name: Robot
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
