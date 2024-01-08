@@ -150,6 +150,7 @@ smoother_server:
   ros__parameters:
     use_sim_time: *default_use_sim_time
     smoother_plugins: ["simple_smoother"]
+    enable_stamped_cmd_vel: True
     simple_smoother:
       plugin: "nav2_smoother::SimpleSmoother"
 
@@ -159,6 +160,7 @@ behavior_server:
     global_frame: map
     robot_base_frame: base_link
     use_sim_time: *default_use_sim_time
+    enable_stamped_cmd_vel: True
     behavior_plugins: ["spin", "backup", "drive_on_heading", "wait"]
     spin:
       plugin: "nav2_behaviors/Spin"
