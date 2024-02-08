@@ -17,7 +17,8 @@ def generate_launch_description():
     # Navigation
     navigation = GroupAction(
         actions=[
-            SetRemap(src="/cmd_vel", dst="/ap/cmd_vel"),
+            # TODO: enable when navigation2 supports twist stamped
+            # SetRemap(src="/cmd_vel", dst="/ap/cmd_vel"),
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(
                     str(
@@ -38,6 +39,20 @@ def generate_launch_description():
                 }.items(),
             ),
         ]
+    )
+
+    # TODO: disable when navigation2 supports twist stamped
+    # Twist stamper.
+    twist_stamper = Node(
+        package="twist_stamper",
+        executable="twist_stamper",
+        parameters=[
+            {"frame_id": "base_link"},
+        ],
+        remappings=[
+            ("cmd_vel_in", "cmd_vel"),
+            ("cmd_vel_out", "ap/cmd_vel"),
+        ],
     )
 
     # Robot description.
@@ -75,7 +90,8 @@ def generate_launch_description():
             DeclareLaunchArgument(
                 "rviz", default_value="true", description="Open RViz."
             ),
-            rviz,
             navigation,
+            twist_stamper,
+            rviz,
         ]
     )
